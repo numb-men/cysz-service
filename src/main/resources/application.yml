@@ -1,0 +1,98 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: humor
+  datasource:
+    url: jdbc:mysql://localhost:3306/DbTest?useUnicode=true&useSSL=false&serverTimezone=GMT%2B8&characterEncoding=utf-8
+    username: root
+    password: NumbMen221@love!
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 100
+      auto-commit: true
+      idle-timeout: 30000
+      max-lifetime: 1800000
+      connection-timeout: 30000
+  jackson:
+    time-zone: GMT+8
+  data:
+    redis:
+      repositories:
+        enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: true
+    properties:
+      hibernate:
+        generate_statistics: false
+        format-sql: true
+        cache:
+          use_query_cache: true
+          use_second_level_cache: true
+          provider_class: org.hibernate.cache.EhCacheProvider
+          provider_configuration_file_resource_path: ehcache.xml
+          ehcache:
+            missing_cache_strategy: create
+          region:
+            factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+      javax:
+        persistence:
+          sharedCache:
+            mode: ENABLE_SELECTIVE
+  cache:
+    type: ehcache
+    ehcache:
+      config: classpath:ehcache.xml
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    timeout: 0
+    password:
+    jedis:
+      pool:
+        max-active: 1000
+        max-wait: -1
+        max-idle: 10
+        min-idle: 2
+  servlet:
+    multipart:
+      max-file-size: 500000
+      max-request-size: 5000000
+
+server:
+  port: 10001
+  tomcat:
+    uri-encoding: UTF-8
+logging:
+  level:
+    root: info
+  path: ../log/
+
+hengyumo:
+  base:
+    system:
+      admin:
+        name: admin
+        password: admin@123
+      default:
+        password: humor@123
+      captcha:
+        expire: 120
+    cysz:
+      default:
+        password: cysz1234
+  file:
+    upload:
+      path: E:/humor_upload/
+  resource:
+    scan: cn.hengyumo.humor
+  dict:
+    scan: cn.hengyumo.humor
+  wx:
+    appId: wxa893838fe64bd72c
+    appSecret: f5157912906d57b2d14178012b1817a6

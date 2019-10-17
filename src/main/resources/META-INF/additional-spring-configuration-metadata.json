@@ -1,0 +1,24 @@
+{
+  "properties": [
+    {
+      "name": "hengyumo.base.system.admin.name",
+      "type": "java.lang.String",
+      "description": "Description for hengyumo.base.system.admin.name."
+    },
+    {
+      "name": "hengyumo.base.system.admin.password",
+      "type": "java.lang.String",
+      "description": "Description for hengyumo.base.system.admin.password."
+    },
+    {
+      "name": "hengyumo.wx.appId",
+      "type": "java.lang.String",
+      "description": "Description for hengyumo.wx.appId."
+    },
+    {
+      "name": "hengyumo.wx.appSecret",
+      "type": "java.lang.String",
+      "description": "Description for hengyumo.wx.appSecret."
+    }
+  ]
+}

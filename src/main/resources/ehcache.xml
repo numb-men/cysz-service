@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<ehcache name="HIBERNATE_CACHE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.ehcache.org/ehcache.xsd"
+         updateCheck="false" monitoring="autodetect" dynamicConfig="true">
+
+    <diskStore path="../cache/base"/>
+
+    <transactionManagerLookup
+            class="net.sf.ehcache.transaction.manager.DefaultTransactionManagerLookup"
+            properties="jndiName=java:/TransactionManager"
+            propertySeparator=";"/>
+
+    <defaultCache
+            maxEntriesLocalHeap="1000"
+            eternal="false"
+            timeToIdleSeconds="1800"
+            timeToLiveSeconds="3600">
+        <!--<terracotta/>-->
+    </defaultCache>
+
+    <cache name="baseCache"
+           maxEntriesLocalHeap="1000"
+           maxEntriesLocalDisk="10000"
+           eternal="false"
+           diskSpoolBufferSizeMB="20"
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="3600"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap"/>
+    </cache>
+
+    <cache name="wxSessionCache"
+           maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="50000"
+           eternal="false"
+           timeToIdleSeconds="7200"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap"/>
+    </cache>
+
+    <cache name="captchaCache"
+           maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="50000"
+           eternal="false"
+           timeToIdleSeconds="120"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap"/>
+    </cache>
+
+    <cache name="urlResourceMappingCache"
+           maxEntriesLocalHeap="200"
+           maxEntriesLocalDisk="500"
+           eternal="false"
+           timeToIdleSeconds="72000"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap"/>
+    </cache>
+
+    <cache name="default-query-results-region"
+           maxEntriesLocalHeap="5"
+           eternal="false"
+           timeToLiveSeconds="120">
+        <persistence strategy="localTempSwap"/>
+    </cache>
+
+    <cache name="org.hibernate.cache.spi.TimestampsCache"
+           maxEntriesLocalHeap="5000"
+           eternal="true">
+        <persistence strategy="localTempSwap"/>
+    </cache>
+
+</ehcache>
