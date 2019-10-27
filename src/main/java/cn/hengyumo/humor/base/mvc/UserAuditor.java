@@ -1,12 +1,10 @@
 package cn.hengyumo.humor.base.mvc;
 
 
-import cn.hengyumo.humor.base.exception.common.BaseException;
-import cn.hengyumo.humor.base.exception.enums.BaseResultEnum;
-import cn.hengyumo.humor.base.system.user.SystemCurrentUser;
-import cn.hengyumo.humor.base.utils.BaseUtil;
-import cn.hengyumo.humor.cysz.user.CyszCurrentUser;
-import cn.hengyumo.humor.wx.user.WxCurrentUser;
+import cn.hengyumo.humor.cysz.entity.CyszCurrentUser;
+import cn.hengyumo.humor.system.entity.SystemCurrentUser;
+import cn.hengyumo.humor.utils.BaseUtil;
+import cn.hengyumo.humor.wx.entity.WxCurrentUser;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.domain.AuditorAware;

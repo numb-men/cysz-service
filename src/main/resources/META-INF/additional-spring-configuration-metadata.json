@@ -19,6 +19,36 @@
       "name": "hengyumo.wx.appSecret",
       "type": "java.lang.String",
       "description": "Description for hengyumo.wx.appSecret."
+    },
+    {
+      "name": "hengyumo.base.system.default.password",
+      "type": "java.lang.String",
+      "description": "Description for hengyumo.base.system.default.password."
+    },
+    {
+      "name": "hengyumo.base.system.captcha.expire",
+      "type": "java.lang.String",
+      "description": "Description for hengyumo.base.system.captcha.expire."
+    },
+    {
+      "name": "hengyumo.base.cysz.default.password",
+      "type": "java.lang.String",
+      "description": "Description for hengyumo.base.cysz.default.password."
+    },
+    {
+      "name": "hengyumo.file.upload.path",
+      "type": "java.lang.String",
+      "description": "Description for hengyumo.file.upload.path."
+    },
+    {
+      "name": "hengyumo.resource.scan",
+      "type": "java.lang.String",
+      "description": "Description for hengyumo.resource.scan."
+    },
+    {
+      "name": "hengyumo.dict.scan",
+      "type": "java.lang.String",
+      "description": "Description for hengyumo.dict.scan."
     }
   ]
 }

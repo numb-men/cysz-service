@@ -1,6 +1,6 @@
 package cn.hengyumo.humor.base.mvc;
 
-import cn.hengyumo.humor.base.utils.CopyUtil;
+import cn.hengyumo.humor.utils.CopyUtil;
 import com.github.wenhao.jpa.Specifications;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

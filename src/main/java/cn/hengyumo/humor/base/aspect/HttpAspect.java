@@ -24,7 +24,9 @@ public class HttpAspect {
 
     private final static Logger logger = LoggerFactory.getLogger(HttpAspect.class);
 
-    @Pointcut("execution(public * cn.hengyumo.www.base_spring_boot_jpa.b2c.controller.*.*(..))")
+    @Pointcut("(execution(public * cn.hengyumo.humor.base.mvc.BaseController.*(..)) || " +
+            "execution(public * cn.hengyumo.humor.system.controller.*.*(..)) ||" +
+            "execution(public * cn.hengyumo.humor.cysz.controller.*.*(..)))")
     public void log() {
     }
 

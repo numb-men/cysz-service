@@ -1,9 +1,9 @@
 package cn.hengyumo.humor.b2c.entity;
 
 import cn.hengyumo.humor.base.mvc.BaseEntity;
-import cn.hengyumo.humor.base.system.config.SystemDict;
-import cn.hengyumo.humor.base.system.config.UseSystemDict;
-import cn.hengyumo.humor.wx.user.WxUser;
+import cn.hengyumo.humor.system.annotation.SystemDict;
+import cn.hengyumo.humor.system.annotation.UseSystemDict;
+import cn.hengyumo.humor.wx.entity.WxUser;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

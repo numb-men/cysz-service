@@ -1,8 +1,8 @@
 package cn.hengyumo.humor.base.config;
 
-import cn.hengyumo.humor.base.system.user.SystemCurrentUser;
-import cn.hengyumo.humor.cysz.user.CyszCurrentUser;
-import cn.hengyumo.humor.wx.user.WxCurrentUser;
+import cn.hengyumo.humor.cysz.entity.CyszCurrentUser;
+import cn.hengyumo.humor.system.entity.SystemCurrentUser;
+import cn.hengyumo.humor.wx.entity.WxCurrentUser;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
